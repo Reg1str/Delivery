@@ -1,0 +1,14 @@
+﻿@model FormOrder
+
+@{
+    
+}
+<div>
+    <h2>@Model.Id.ToString()</h2>
+    <p>@Model.SendersCity</p>
+    <p>@Model.SendersAddress</p>
+    <p>@Model.RecipientsCity</p>
+    <p>@Model.RecipientsAddress</p>
+    <p>@Model.Weight.ToString() kg</p>
+    <p>@Model.ReceiptTime.ToString()</p>
+</div>

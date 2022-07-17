@@ -1,0 +1,36 @@
+﻿@model OrderViewModel
+
+@{
+    
+}
+
+<div>
+    <form asp-controller="AdminPanel" asp-action="Edit" method="post">
+        <input asp-for="Id" type="hidden"/>
+        <div>
+            <label>Sender's City</label>
+            <input asp-for="SendersCity" required/>
+        </div>
+        <div>
+            <label>Sender's Address</label>
+            <input asp-for="SendersAddress" required/>
+        </div>
+        <div>
+            <label>Recipient's City</label>
+            <input asp-for="RecipientsCity" required/>
+        </div>
+        <div>
+            <label>Recipient's Address</label>
+            <input asp-for="RecipientsAddress" required/>
+        </div>
+        <div>
+            <label>Weight</label>
+            <input asp-for="Weight" required/>
+        </div>
+        <div>
+            <label>Receipt Time</label>
+            <input asp-for="ReceiptTime" required/>
+        </div>
+        <input type="submit" value="Submit"/>
+    </form>
+</div>

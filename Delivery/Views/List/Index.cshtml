@@ -1,0 +1,18 @@
+﻿@model IEnumerable<FormOrder>
+
+@{
+    
+}
+
+<div>
+    <ul>
+        @foreach (var order in Model)
+        {
+            <li>
+                <a asp-controller="List" asp-action="FormOrder" asp-route-id="@order.Id">
+                    @order.RecipientsAddress
+                </a>
+            </li>
+        }
+    </ul>
+</div>
