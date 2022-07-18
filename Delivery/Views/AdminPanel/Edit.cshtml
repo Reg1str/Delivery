@@ -5,32 +5,33 @@
 }
 
 <div>
-    <form asp-controller="AdminPanel" asp-action="Edit" method="post">
+    <h2 class="edit-title">Order form</h2>
+    <form class="edit-form" asp-controller="AdminPanel" asp-action="Edit" method="post">
         <input asp-for="Id" type="hidden"/>
-        <div>
-            <label>Sender's City</label>
-            <input asp-for="SendersCity" required/>
+        <div class="edit-bloc">
+            <label class="edit-field-title">Sender's City</label>
+            <input class="edit-field" asp-for="SendersCity" required/>
         </div>
-        <div>
-            <label>Sender's Address</label>
-            <input asp-for="SendersAddress" required/>
+        <div class="edit-bloc">
+            <label class="edit-field-title">Sender's Address</label>
+            <input class="edit-field" asp-for="SendersAddress" required/>
         </div>
-        <div>
-            <label>Recipient's City</label>
-            <input asp-for="RecipientsCity" required/>
+        <div class="edit-bloc">
+            <label class="edit-field-title">Recipient's City</label>
+            <input class="edit-field" asp-for="RecipientsCity" required/>
         </div>
-        <div>
-            <label>Recipient's Address</label>
-            <input asp-for="RecipientsAddress" required/>
+        <div class="edit-bloc">
+            <label class="edit-field-title">Recipient's Address</label>
+            <input class="edit-field" asp-for="RecipientsAddress" required/>
         </div>
-        <div>
-            <label>Weight (kg)</label>
-            <input asp-for="Weight" required/>
+        <div class="edit-bloc">
+            <label class="edit-field-title">Weight (kg)</label>
+            <input class="edit-field" asp-for="Weight" required/>
         </div>
         @* <div> *@
         @*     <label>Receipt Time</label> *@
         @*     <input type="datetime-local" asp-for="ReceiptTime" required/> *@
         @* </div> *@
-        <input type="submit" value="Submit"/>
+        <input class="submit-button-edit button first" type="submit" value="Submit"/>
     </form>
 </div>

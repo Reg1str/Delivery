@@ -4,15 +4,40 @@
     
 }
 
-<div>
-    <ul>
-        @foreach (var order in Model)
-        {
-            <li>
-                <a asp-controller="Home" asp-action="FormOrder" asp-route-id="@order.Id">
+<div class="main-img">
+    <span class="title">Orders list</span>
+</div>
+
+
+<div class="container">
+    @foreach (var order in Model)
+    {
+        <div class="order">
+            <a asp-controller="Home" asp-action="FormOrder" asp-route-id="@order.Id">
+                <span class="order-title">
                     @order.RecipientsAddress
-                </a>
-            </li>
-        }
-    </ul>
+                </span>
+            </a>
+            <div class="order-body">
+                <span class="order-body-elements">
+                    Sender's city:
+                </span>
+                <span class="order-body-elements-input">
+                    @order.SendersCity
+                </span>
+                <span class="order-body-elements">
+                    Sender's Address:
+                </span>
+                <span class="order-body-elements-input">
+                    @order.SendersAddress
+                </span>
+                <span class="order-body-elements">
+                    Recipient's city:
+                </span>
+                <span class="order-body-elements-input">
+                    @order.RecipientsCity
+                </span>
+            </div>
+        </div>
+    }
 </div>

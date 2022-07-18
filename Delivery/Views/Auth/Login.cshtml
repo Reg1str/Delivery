@@ -4,14 +4,14 @@
     
 }
 
-<form asp-controller="Auth" asp-action="Login" method="post">
+<form class="signing-form" asp-controller="Auth" asp-action="Login" method="post">
     <div>
-        <label>Username</label>
-        <input asp-for="UserName"/>
+        <label class="signing-title">Username</label>
+        <input class="signing-field" asp-for="UserName"/>
     </div>
     <div>
-        <label>Password</label>
-        <input asp-for="Password"/>
+        <label class="signing-title">Password</label>
+        <input class="signing-field" asp-for="Password"/>
     </div>
-    <input type="submit" value="Sign In"/>
+    <input class="submit-button-signing button first" type="submit" value="Sign In"/>
 </form>

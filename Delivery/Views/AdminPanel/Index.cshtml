@@ -3,23 +3,50 @@
 @{
     
 }
-<h2>Admin Panel</h2>
+<div class="main-img">
+     <span class="title">Orders managment</span>
+ </div>
 
-<div>
-    <ul>
-        @foreach (var order in Model)
-        {
-            <li>
+
+<div class="container">
+@foreach (var order in Model)
+{
+    <div class="order">
+        <span class="order-title">
                 @order.RecipientsAddress
-                -
-                <a asp-controller="AdminPanel" asp-action="Edit" asp-route-id="@order.Id">
-                    Edit
-                </a>
-                -
-                <a asp-controller="AdminPanel" asp-action="Remove" asp-route-id="@order.Id">
-                    Remove
-                </a>
-            </li>
-        }
-    </ul>
+            </span>
+        <div class="order-body">
+            <span class="order-body-elements">
+                Sender's city:
+            </span>
+            <span class="order-body-elements-input">
+                @order.SendersCity
+            </span>
+            <span class="order-body-elements">
+                Sender's Address:
+            </span>
+            <span class="order-body-elements-input">
+                @order.SendersAddress
+            </span>
+            <span class="order-body-elements">
+                Recipient's city:
+            </span>
+            <span class="order-body-elements-input">
+                @order.RecipientsCity
+            </span>
+            <span class="order-body-elements">
+                Weight (kg):
+            </span>
+            <span class="order-body-elements-input">
+                @order.Weight.ToString()
+            </span>
+            <a class="edit-button" asp-controller="AdminPanel" asp-action="Edit" asp-route-id="@order.Id"> 
+                Edit
+            </a>
+            <a class="remove-button" asp-controller="AdminPanel" asp-action="Remove" asp-route-id="@order.Id">
+                Remove
+            </a>
+        </div>
+    </div>
+}
 </div>

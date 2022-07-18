@@ -4,11 +4,43 @@
     
 }
 <div>
-    <h2>ID: @Model.Id.ToString()</h2>
-    <p>Sender's city: @Model.SendersCity</p>
-    <p>Sender's address: @Model.SendersAddress</p>
-    <p>Recipient's city: @Model.RecipientsCity</p>
-    <p>Recipient's address: @Model.RecipientsAddress</p>
-    <p>Weight (kg): @Model.Weight.ToString() kg</p>
-    <p>ReceiptTime: @Model.ReceiptTime.ToString("g")</p>
+    <h2 class="order-details-title">Order ID: @Model.Id.ToString()</h2>
+    <div class="order-details">
+        <p class="order-details-body-elements">
+            Sender's city:
+        </p>
+        <p class="order-details-body-elements-input">
+            @Model.SendersCity
+        </p>
+        <p class="order-details-body-elements">
+            Sender's address:
+        </p>
+        <p class="order-details-body-elements-input">
+            @Model.SendersAddress
+        </p>
+        <p class="order-details-body-elements">
+            Recipient's city:
+        </p>
+        <p class="order-details-body-elements-input">
+            @Model.RecipientsCity
+        </p>
+        <p class="order-details-body-elements">
+            Recipient's address:
+        </p>
+        <p class="order-details-body-elements-input">
+            @Model.RecipientsAddress
+        </p>
+        <p class="order-details-body-elements">
+            Weight (kg):
+        </p>
+        <p class="order-details-body-elements-input">
+            @Model.Weight.ToString() kg
+        </p>
+        <p class="order-details-body-elements">
+            ReceiptTime:
+        </p>
+        <p class="order-details-body-elements-input">
+            @Model.ReceiptTime.ToString("g")
+        </p>
+    </div>
 </div>
