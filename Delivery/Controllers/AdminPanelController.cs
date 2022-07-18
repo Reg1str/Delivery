@@ -39,6 +39,7 @@ public class AdminPanelController : Controller
                 RecipientsCity = order.RecipientsCity,
                 RecipientsAddress = order.RecipientsAddress,
                 Weight = order.Weight,
+                ReceiptDate = order.ReceiptDate
             });
         }    }
     
@@ -53,6 +54,7 @@ public class AdminPanelController : Controller
             RecipientsCity = orderViewModel.RecipientsCity,
             RecipientsAddress = orderViewModel.RecipientsAddress,
             Weight = orderViewModel.Weight,
+            ReceiptDate = orderViewModel.ReceiptDate
         };
         
         if (order.Id > 0)

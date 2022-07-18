@@ -28,10 +28,10 @@
             <label class="edit-field-title">Weight (kg)</label>
             <input class="edit-field" asp-for="Weight" required/>
         </div>
-        @* <div> *@
-        @*     <label>Receipt Time</label> *@
-        @*     <input type="datetime-local" asp-for="ReceiptTime" required/> *@
-        @* </div> *@
+        <div class="edit-bloc">
+            <label class="edit-field-title">Receipt Time</label>
+            <input class="edit-field" type="date" asp-for="ReceiptDate" required/>
+        </div>
         <input class="submit-button-edit button first" type="submit" value="Submit"/>
     </form>
 </div>

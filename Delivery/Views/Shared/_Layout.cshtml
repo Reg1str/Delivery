@@ -16,6 +16,7 @@
                 <a class="nav-main" asp-controller="AdminPanel" asp-action="Edit">New order</a>
                 <a class="nav-main" asp-controller="AdminPanel" asp-action="Index">Orders Managment</a>
             }
+            <div class="logo">Delivery</div>
                 @if (User.Identity.IsAuthenticated)
                 {
                     <a class="sign-button" asp-controller="Auth" asp-action="Logout">Logout</a>
@@ -24,7 +25,7 @@
                 {
                     <a class="sign-button" asp-controller="Auth" asp-action="Login">Sign In</a>
                 }
-                </nav>  
+        </nav>  
     </div>
     <div>
         @RenderBody()

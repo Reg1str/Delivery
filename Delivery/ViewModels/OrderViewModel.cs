@@ -1,4 +1,6 @@
-﻿namespace Delivery.ViewModels;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Delivery.ViewModels;
 
 public class OrderViewModel
 {
@@ -7,7 +9,9 @@ public class OrderViewModel
     public string SendersAddress { get; set; } = "";
     public string RecipientsCity { get; set; } = "";
     public string RecipientsAddress { get; set; } = "";
-    public int? Weight { get; set; } = null;
-    public DateTime? ReceiptTime { get; set; } = null;
+    public int? Weight { get; set; }
+    
+    [DataType(DataType.Date)]
+    public DateTime ReceiptDate { get; set; } = DateTime.Today;
 
 }

@@ -22,14 +22,23 @@ nav a {
     padding: 15px;
 }
 
+.logo {
+    display: inline-block;
+    position: fixed;
+    top: 23px;
+    font-size: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .sign-button {
     padding: 15px;
     float: right;
 }
 
-.main-img {
+.main-title {
     position: relative;
-    height: 80px;
+    height: 60px;
     background-position: center;
     background-size: cover;
 }
