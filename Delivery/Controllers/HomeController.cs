@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Delivery.Controllers;
 
-public class ListController : Controller
+public class HomeController : Controller
 {
-    private Repository _repository;
+    private IRepository _repository;
 
-    public ListController(Repository repository)
+    public HomeController(IRepository repository)
     {
         _repository = repository;
     }

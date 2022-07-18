@@ -1,5 +1,4 @@
-﻿
-using Delivery.DataAccess.EntityFramework;
+﻿using Delivery.DataAccess.EntityFramework;
 using Delivery.DataAccess.Models;
 
 namespace Delivery.Services.Repository;

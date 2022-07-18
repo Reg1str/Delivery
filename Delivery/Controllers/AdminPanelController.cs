@@ -9,9 +9,9 @@ namespace Delivery.Controllers;
 [Authorize(Roles = "Admin")]
 public class AdminPanelController : Controller
 {
-    private Repository _repository;
+    private IRepository _repository;
 
-    public AdminPanelController(Repository repository)
+    public AdminPanelController(IRepository repository)
     {
         _repository = repository;
     }
@@ -39,7 +39,6 @@ public class AdminPanelController : Controller
                 RecipientsCity = order.RecipientsCity,
                 RecipientsAddress = order.RecipientsAddress,
                 Weight = order.Weight,
-                ReceiptTime = order.ReceiptTime
             });
         }    }
     
@@ -54,7 +53,6 @@ public class AdminPanelController : Controller
             RecipientsCity = orderViewModel.RecipientsCity,
             RecipientsAddress = orderViewModel.RecipientsAddress,
             Weight = orderViewModel.Weight,
-            ReceiptTime = orderViewModel.ReceiptTime
         };
         
         if (order.Id > 0)

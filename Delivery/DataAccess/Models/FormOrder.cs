@@ -8,6 +8,6 @@ public class FormOrder
     public string RecipientsCity { get; set; } = "";
     public string RecipientsAddress { get; set; } = "";
     public int? Weight { get; set; } = null;
-    public DateTime? ReceiptTime { get; set; } = null;
+    public DateTime ReceiptTime { get; set; } = DateTime.Now;
 
 }
